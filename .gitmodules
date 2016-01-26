@@ -7,3 +7,6 @@
 [submodule "statuscheck"]
 	path = statuscheck
 	url = git@bitbucket.org:umichdig/statuscheck.git
+[submodule "student_explorer/extras"]
+	path = student_explorer/extras
+	url = git@bitbucket.org:umichdig/student_explorer_extras.git
