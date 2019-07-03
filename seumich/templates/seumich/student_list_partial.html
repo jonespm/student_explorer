@@ -49,10 +49,10 @@
         <tbody>
             {% for student in students %}
                 <tr>
-                    <th scope="row" class="bold">
+                    <td scope="row" class="bold" data-text="{{student.last_name}} {{student.first_name}}">
                         <a href="{% url 'seumich:student' student.username %}">{{ student.first_name }}
                             {{ student.last_name }}</a>
-                    </th>
+                    </td>
                     <td class="hide-small">{{ student.univ_id }}</td>
                     <td>
                         {% for element in student.studentclasssitestatus_set.all %}

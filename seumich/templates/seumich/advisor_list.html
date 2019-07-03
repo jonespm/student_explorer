@@ -21,13 +21,13 @@
                 <tbody>
                     {% for advisor in advisors %}
                         <tr>
-                            <th scope="row" class="bold">
+                            <td scope="row" class="bold" data-text="{{advisor.last_name}} {{advisor.first_name}}">
                                 {% url 'seumich:advisor' advisor.username as advisor_url %}
                                 {% if advisor_url %}
                                     <a href="{{advisor_url}}">
                                         {{ advisor.first_name }} {{ advisor.last_name }} ({{advisor.username}})</a>
                                 {% endif %}
-                            </th>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>
