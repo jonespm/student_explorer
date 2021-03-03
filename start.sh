@@ -39,6 +39,7 @@ if [ -z "${IS_CRON_POD}" ]; then
             --bind 0.0.0.0:${GUNICORN_PORT} \
             --workers="${GUNICORN_WORKERS}" \
             --timeout="${GUNICORN_TIMEOUT}" \
+            --access-logfile - \
             ${GUNICORN_RELOAD}
     else
         # Currently ptvsd doesn't work with gunicorn
