@@ -12,6 +12,8 @@ from django.contrib import admin
 from django.conf import settings
 from . import views
 
+import watchman
+
 urlpatterns = [
     path(
         'robots.txt',
@@ -25,7 +27,7 @@ urlpatterns = [
     path('feedback/', include('feedback.urls', namespace='feedback')),
     path('usage/', include('usage.urls', namespace='usage')),
     path('status/', include('watchman.urls')),
-    path('status/ping', views.ping, name="pingnoslash"),
+    path('status/ping', watchman.views.ping, name="pingnoslash"),
 ]
 
 # Override auth_logout from djangosaml2 and registration for consistent behavior
